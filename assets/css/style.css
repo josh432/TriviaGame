@@ -1,0 +1,24 @@
+html,
+body,
+header, {
+    
+    height: 100%;
+}
+
+.jumbotron {
+
+	background-color: rgba(93,147,194,0.55);
+}
+
+.container {
+	font-family: 'Bangers', cursive;
+}
+
+body {
+
+	background: url("../images/simpsons.jpg");
+	background-size:65%;
+	
+
+
+}
