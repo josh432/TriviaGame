@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cartoon Trivia Game</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<META NAME="Author" CONTENT="Joshua Silverman">
+	<META NAME="Designer" CONTENT="Joshua Silverman">
+	<META NAME="Game" CONTENT="Cartoon Trivia Game">
+	<META NAME="Language" CONTENT="English">
+	<META NAME="distribution" CONTENT="Local">
+	<META NAME="Robots" CONTENT="INDEX,FOLLOW">
+	<META NAME="zipcode" CONTENT="94523">
+	<META NAME="city" CONTENT="Pleasant Hill">
+	<META NAME="country" CONTENT="USA">
+
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<main class="container">
+		<div class="jumbotron text-center">
+			<h1>Let's See If You Know Your Cartoons!</h1>
+		</div>
+		<div class="row">
+		<div class="well well-lg">Time Remaining:<span id="displayTime"></span><h3>seconds</h3></div>
+		</div>
+			<div class="container questions">
+				<div class="row text-center">
+					<h1>You have 120 seconds!</h1>
+					<h2>1. "Who is Mickey Mouse's girlfriend?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q1" id="correct1" value="option1">Minnie 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q1" class="wrong1" value="option2"> Elsa
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q1" class="wrong1" value="option3"> Ariel
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q1" class="wrong1" value="option4"> Tinker Bell
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q1" class="wrong1" value="option4"> Alice
+						</label>
+					
+
+						<h2>2. "Which sailor character would be lost without his can of spinach?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q2" class="wrong2" value="option1">Captain Hook 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q2" id="correct2" value="option2"> Popeye
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q2" class="wrong2" value="option3"> Captain Jack
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q2" class="wrong2" value="option4"> Bluto
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q2" class="wrong2" value="option4"> Olive Oyl
+						</label>
+
+						<h2>3. "I am yellow and square. My best friend is a star shaped pink guy. We both live under the sea. Which cartoon character am I?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q3" class="wrong3" value="option1">Clarence 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q3" class="wrong3" value="option2"> Danny Phantom
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q3" class="wrong3" value="option3"> Dora the Explorer
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q3" class="wrong3" value="option4"> Scruffy
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q3" id="correct3" value="option4"> Sponge Bob Square Pants
+						</label>
+
+						<h2>4. "I am part of a team of super sleuths who solve mysteries and chase monsters. Even though I am a dog, I can still speak, though not clearly. Who am I?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q4" class="wrong4" value="option1">Snoopy 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q4" class="wrong4" value="option2"> Pluto
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q4" id="correct4" value="option3"> Scoopy Doo
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q4" class="wrong4" value="option4"> Underdog
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q4" class="wrong4" value="option4"> Goofy
+						</label>
+
+						<h2>5. "I am coloured gray and love toying with bald hunters. What is my name?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q5" class="wrong5" value="option1">Caspar 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q5" class="wrong5" value="option2"> Magilla Gorilla
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q5" class="wrong5" value="option3"> Mickey Mouse
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q5" id="correct5" value="option4"> Bugs Bunny
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q5" class="wrong5" value="option4"> Garfield
+						</label>
+
+						<h2>6. "Which character does NOT belong?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q6" class="wrong6" value="option1">Pluto 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q6" class="wrong6" value="option2"> Goofy
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q6" class="wrong6" value="option3"> Minnie
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q6" class="wrong6" value="option4"> Snow White
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q6" id="correct6" value="option4"> Road Runner
+						</label>
+
+						<h2>7. "Which one of these is not one of Donald Duck's nephews?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q7" class="wrong7" value="option1">Huey 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q7" class="wrong7" value="option2"> Dewey
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q7" class="wrong7" value="option3"> Louie
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q7" id="correct7" value="option4"> Joey
+						</label>
+
+						<h2>8. "Which animated character is called The Lord of the Jungle?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q8" class="wrong8" value="option1">Magilla Gorilla
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q8" id="correct8" value="option2"> Tarzan
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q8" class="wrong8" value="option3"> Scar
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q8" class="wrong8" value="option4"> Mufasa
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q8" class="wrong8" value="option4"> Baloo
+						</label>
+
+						<h2>9. "Who is Batman's side-kick?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q9" class="wrong9" value="option1">Superman 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q9" class="wrong9" value="option2"> Bat Girl
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q9" class="wrong9" value="option3"> The Hulk
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q9" id="correct9" value="option4"> Robin
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q9" class="wrong9" value="option4"> The Joker
+						</label>
+
+						<h2>10. "Who is the cute red-haired daughter of Wilma and Fred Flintstone?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q10" class="wrong10" value="option1">Betty 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q10" class="wrong10" value="option2"> Rose
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q10" class="wrong10" value="option3"> Bam-Bam
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q10" id="correct10" value="option4"> Pebbles
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q10" class="wrong10" value="option4"> Minnie
+						</label>
+
+						<h2>11. "In the cartoon The Jetsons, what is the name of the Jetsons' dog?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q11" class="wrong11" value="option1">Meteor 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q11" class="wrong11" value="option2"> Comet
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q11" class="wrong11" value="option3"> Jupiter
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q11" class="wrong11" value="option4"> Neptune
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q11" id="correct11" value="option4"> Astro
+						</label>
+
+						<h2>12.  "Which one is Batman's arch-enemy?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q12" class="wrong12" value="option1">The Hulk
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q12" class="wrong12" value="option2"> Spider Man
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q12" class="wrong12" value="option3"> Superman
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q12" id="correct12" value="option4"> The Joker
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q12" class="wrong12" value="option4"> The Green Goblin
+						</label>
+
+						<h2>13. "Where do the Simpsons live?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q13" id="correct13" value="option1">Springfield 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q13" class="wrong13" value="option2"> Smallville
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q13" class="wrong13" value="option3"> Krypton
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q13" class="wrong13" value="option4"> San Francisco
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q13" class="wrong13" value="option4"> Peoria
+						</label>
+
+						<h2>14. "Pluto is the pet of which famous Disney character?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q14" class="wrong14" value="option1">Minnie 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q14" class="wrong14" value="option2"> Goofy
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q14" class="wrong14" value="option3"> Clarabelle
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q14" id="correct14" value="option4"> Mickey
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q14" class="wrong14" value="option4"> Daffy
+						</label>
+
+						<h2>15. "What does Bugs Bunny say in almost every cartoon he is in?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q15" class="wrong15" value="option1">That's all folks
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q15" class="wrong15" value="option2">Take a left turn at Albequerque
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q15" id="correct15" value="option3"> What's up doc
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q15" class="wrong15" value="option4"> Carrots are divine
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q15" class="wrong15" value="option4"> Ain't I a stinker
+						</label>
+
+						<h2>16. "What is Mario's occupation?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q16" class="wrong16" value="option1">Barrel Maker
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q16" id="correct16" value="option2"> Plumber
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q16" class="wrong16" value="option3"> Baker
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q16" class="wrong16" value="option4"> Taxi Driver
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q16" class="wrong16" value="option4"> Programmer
+						</label>
+
+						<h2>17. "This is a cartoon about a group of mutant superheroes which includes members Storm, Jubilee, Rogue and Gambit. What is the name of this team?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q17" class="wrong17" value="option1">The Avengers 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q17" id="correct17" value="option2"> X-Men
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q17" class="wrong17" value="option3"> Justice League
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q17" class="wrong17" value="option4"> The Doom Patrol
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q17" class="wrong17" value="option4"> All Star Squadron
+						</label>
+
+						<h2>18. "What flamingo-colored cat was a popular cartoon character in the 1970s?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q18" class="wrong18" value="option1">Garfield 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q18" class="wrong18" value="option2"> Cheshire Cat
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q18" class="wrong18" value="option3"> Snagglepus
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q18" class="wrong18" value="option4"> Felix the Cat
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q18" id="correct18" value="option4"> The Pink Panther
+						</label>
+
+						<h2>19. "We were born in a lab. We come in a group of three. We are red, green and blue and have superpowers too! Which cartoon are we?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q19" class="wrong19" value="option1">The Teletubbies 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q19" class="wrong19" value="option2"> The Avengers
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q19" id="correct19" value="option3"> The Powerpuff Girls
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q19" class="wrong19" value="option4"> Transformers
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q19" class="wrong19" value="option4"> The Smurfs
+						</label>
+
+						<h2>20. "I am very short and I am a rodent. I have a best friend who looks almost exactly like me. What is my name?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q20" class="wrong20" value="option1">Mickey 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q20" class="wrong20" value="option2"> Minnie
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q20" class="wrong20" value="option3"> Jerry
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q20" id="correct20" value="option4"> Dale
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q20" class="wrong20" value="option4"> Speedy Gonzales
+						</label>
+
+						<h2>21. "Characters: Ash, Pikachu, Nurse Joy, Jesse. What show are they from?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q21" class="wrong21" value="option1">Transformers 
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q21" class="wrong21" value="option2"> Looney Tunes
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q21" id="correct21" value="option3"> Pokemon
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q21" class="wrong21" value="option4"> The Simpsons
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q21" class="wrong21" value="option4"> The Jetsons
+						</label>
+
+
+						<h2>22. "What was the name of Mickey's first cartoon to be featured in sound?"</h2>
+						<label class="radio-inline">
+			  			<input type="radio" name="q22" class="wrong22" value="option1"> What's Opera Doc
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q22" class="wrong22" value="option2"> Plane Crazy
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q22" id="correct22" value="option3"> Steamboat Willie
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q22" class="wrong22" value="option4"> Bad Ear Day
+						</label>
+						<label class="radio-inline">
+			  			<input type="radio" name="q22" class="wrong22" value="option4"> O Sole Minnie
+						</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						
+
+
+
+
+
+			
+
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		<div class=row>
+			<div class="panel-body text-center well well-lg">
+				<div class="col-sm-4 text-center panel panel-default">Correct: <span id="right">0</span></div>
+				<div class="col-sm-4 text-center panel panel-default">Wrong: <span id="wrong">0</span></div>
+				<div class="col-sm-4 text-center panel panel-default">Unanswered: <span id="unanswered">0</span></div>
+			</div>
+		</div>	
+
+		<div class="row">
+			<div class="col-sm-12">
+			<button type="button" class="newGame btn btn-success btn-sm text-center">New Game</button>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+	</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/javascript/app.js"></script>
+
+</body>
+</html>
