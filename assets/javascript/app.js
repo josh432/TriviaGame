@@ -1,18 +1,24 @@
 
 
-//var right = 0;
-//var wrong = 0;
-//var unanswered = 0;
-var displayTime = 120;
-//var secondsLeft = 0 ;
-//var endOfGame = false;
 
+var displayTime = 100;
+var song = new Audio('assets/The Simpsons.mp3');
 
+$('.questions').hide();
+$('.timer').hide();
+$('.score').hide();
 
-
-
-
+$('.startGame').on('click', function() {
+$('.startGame').hide();
+$('.greet').hide();
+$('.questions').show();
+$('.timer').show();
+$('.score').show();
 showTime();
+song.play();
+});
+
+
 
 function showTime(){
 	$("#displayTime").text(displayTime);
@@ -24,6 +30,9 @@ function decrement(){
 	displayTime--;
 	$("#displayTime").text(displayTime);
 	if (displayTime == 0) {
+    $('.questions').hide();
+    $('.score').animate({ scrollTop: 0 }, 'fast');
+    $('.gameover').html('Game Over!');
 		clearInterval(secondsLeft);
 	}
 };
@@ -222,13 +231,13 @@ if ($('#correct16').is(':checked')) {
   if(unanswered > 0) {
     $('#unanswered').html(unanswered);
       } else {
-        $('#unanswered').empty();
+        $('#unanswered').html(0);
   }
   
  console.log(right);
  console.log(wrong);
 
-
+//hide all questions when game over, push scorebox to top of page.
   
 
 

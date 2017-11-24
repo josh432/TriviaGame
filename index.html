@@ -25,12 +25,18 @@
 		<div class="jumbotron text-center">
 			<h1>Let's See If You Know Your Cartoons!</h1>
 		</div>
-		<div class="row">
-		<div class="well well-lg">Time Remaining:<span id="displayTime"></span><h3>seconds</h3></div>
+	<div class="container" id="startbutton">
+		<div class="row text-center">
+			<h1 class="greet">Click on the button to start the quiz</h1>
+			<button type="button" class="btn btn-warning btn-lg startGame">Begin!</button>
 		</div>
-			<div class="container questions">
+	</div>
+		<div class="row">
+		<div class="timer well well-lg text-center">Time Remaining:<span id="displayTime"></span><h3>seconds</h3></div>
+		</div>
+			<div class="container questions"> <!--hide these when game over -->
 				<div class="row text-center">
-					<h1>You have 120 seconds!</h1>
+					<h1>You have 100 seconds!</h1>
 					<h2>1. "Who is Mickey Mouse's girlfriend?"</h2>
 						<label class="radio-inline">
 			  			<input type="radio" name="q1" id="correct1" value="option1">Minnie 
@@ -403,29 +409,7 @@
 						<label class="radio-inline">
 			  			<input type="radio" name="q22" class="wrong22" value="option4"> O Sole Minnie
 						</label>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						
-
-
-
-
-
-			
-
-				</div>
+					</div>
 			</div>
 
 
@@ -439,18 +423,19 @@
 
 
 		
-		
+	<div class="score">	
 		<div class=row>
 			<div class="panel-body text-center well well-lg">
+				<div class="gameover"></div>
 				<div class="col-sm-4 text-center panel panel-default">Correct: <span id="right">0</span></div>
 				<div class="col-sm-4 text-center panel panel-default">Wrong: <span id="wrong">0</span></div>
 				<div class="col-sm-4 text-center panel panel-default">Unanswered: <span id="unanswered">0</span></div>
-			</div>
+			</div>	
 		</div>	
-
-		<div class="row">
+	</div>
+		<div class="row text-center">
 			<div class="col-sm-12">
-			<button type="button" class="newGame btn btn-success btn-sm text-center">New Game</button>
+			<button type="button" class="newGame btn btn-success btn-lg text-center">New Game</button>
 			</div>
 		</div>
 
