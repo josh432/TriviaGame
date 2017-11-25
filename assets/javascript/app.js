@@ -21,13 +21,15 @@ song.play();
 });
 
 $('.newGame').on('click', function(){
-$('.questions').show();
+$('.questions').fadeIn(7000);
+$('.timer').fadeIn(7000);
 $('.right').html(0);
 $('.wrong').html(0);
 $('.unanswered').html(0);
 displayTime = 100;
 $('input[type=radio]').attr('disabled', false);
-$('input[type=radio]').prop('checked',false); 
+$('input[type=radio]').prop('checked',false);
+$('.gameover').empty(); 
 showTime();
 song.play();
 
@@ -46,6 +48,7 @@ function decrement(){
     $('.questions').hide();
     $('.score').animate({ scrollTop: 0 }, 'fast');
     $('.gameover').html('Game Over!');
+    $('.timer').hide();
 		clearInterval(secondsLeft);
 	}
 };
