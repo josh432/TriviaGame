@@ -12,8 +12,8 @@ $('.newGame').hide();
 $('.startGame').on('click', function() {
 $('.startGame').hide();
 $('.greet').hide();
-$('.questions').show();
-$('.timer').show();
+$('.questions').fadeIn(7000);
+$('.timer').fadeIn(7000);
 $('.score').show();
 $('.newGame').show();
 showTime();
@@ -27,7 +27,7 @@ $('.wrong').html(0);
 $('.unanswered').html(0);
 displayTime = 100;
 $('input[type=radio]').attr('disabled', false);
-$('input[type=radio]').prop('checked',false); //not working
+$('input[type=radio]').prop('checked',false); 
 showTime();
 song.play();
 
