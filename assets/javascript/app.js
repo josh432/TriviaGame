@@ -101,7 +101,7 @@ $( document ).on('click', function() {
   if ($('#correct5').is(':checked')) {
     right++;
   } else if ($('.wrong5').is(':checked')) {
-    wrong = wrong++;
+    wrong++;
   } else {
     unanswered++;
   }
