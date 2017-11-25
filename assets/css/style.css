@@ -19,12 +19,14 @@ body {
 	background: url("../images/simpsons.jpg");
 	background-size:65%;
 	
-
-
-}
+	}
 
 .timer {
 	position: fixed;
 	
+}
+
+label {
+	font-size: 1.5em;
 }
 

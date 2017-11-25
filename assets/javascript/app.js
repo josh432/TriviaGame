@@ -7,6 +7,7 @@ var song = new Audio('assets/The Simpsons.mp3');
 $('.questions').hide();
 $('.timer').hide();
 $('.score').hide();
+$('.newGame').hide();
 
 $('.startGame').on('click', function() {
 $('.startGame').hide();
@@ -14,11 +15,23 @@ $('.greet').hide();
 $('.questions').show();
 $('.timer').show();
 $('.score').show();
+$('.newGame').show();
 showTime();
 song.play();
 });
 
+$('.newGame').on('click', function(){
+$('.questions').show();
+$('.right').html(0);
+$('.wrong').html(0);
+$('.unanswered').html(0);
+displayTime = 100;
+$('input[type=radio]').attr('disabled', false);
+$('input[type=radio]').prop('checked',false); //not working
+showTime();
+song.play();
 
+});
 
 function showTime(){
 	$("#displayTime").text(displayTime);
@@ -226,12 +239,12 @@ if ($('#correct16').is(':checked')) {
     unanswered++;
   }
 
-  $('#right').html(right);
-  $('#wrong').html(wrong);
+  $('.right').html(right);
+  $('.wrong').html(wrong);
   if(unanswered > 0) {
-    $('#unanswered').html(unanswered);
+    $('.unanswered').html(unanswered);
       } else {
-        $('#unanswered').html(0);
+        $('.unanswered').html(0);
   }
   
  console.log(right);
@@ -259,7 +272,7 @@ if ($('#correct16').is(':checked')) {
 
 
 });
-
+//advanced game comments. 
 //start the first game.  All subsequent games are started by the user clicking the 'new game' button.
 //displays time left and if time runs out then the endQuestion function is called.
 
