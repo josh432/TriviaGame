@@ -1,9 +1,10 @@
+//Jquery / Javascript Cartoon Trivia Game
 
-
-
+//Global Variables
 var displayTime = 100;
 var song = new Audio('assets/The Simpsons.mp3');
 
+//Game set-up welcome screen
 $('.questions').hide();
 $('.timer').hide();
 $('.score').hide();
@@ -20,6 +21,7 @@ showTime();
 song.play();
 });
 
+//New Game reset 
 $('.newGame').on('click', function(){
 $('.questions').fadeIn(7000);
 $('.timer').fadeIn(7000);
@@ -27,14 +29,15 @@ $('.right').html(0);
 $('.wrong').html(0);
 $('.unanswered').html(0);
 displayTime = 100;
-$('input[type=radio]').attr('disabled', false);
-$('input[type=radio]').prop('checked',false);
+$('input[type=radio]').attr('disabled', false); //radio button functionality : resets radios
+$('input[type=radio]').prop('checked',false); //clears previous radio selection
 $('.gameover').empty(); 
 showTime();
 song.play();
 
 });
 
+//Timer Functionality
 function showTime(){
 	$("#displayTime").text(displayTime);
 	secondsLeft = setInterval(decrement, 1000);
@@ -44,7 +47,7 @@ function showTime(){
 function decrement(){
 	displayTime--;
 	$("#displayTime").text(displayTime);
-	if (displayTime == 0) {
+	if (displayTime == 0) {  //hide all questions when game over, push scorebox to top of page.
     $('.questions').hide();
     $('.score').animate({ scrollTop: 0 }, 'fast');
     $('.gameover').html('Game Over!');
@@ -55,12 +58,13 @@ function decrement(){
 
 
 
-
+//Radio Button functionality
 $(":radio").click(function(){
    var radioName = $(this).attr("name"); //Get radio name
   $(":radio[name='"+radioName+"']:not(:checked)").attr("disabled", true); //Disable all unchecked radios with the same name
 });
 
+//Main Game logic
 $( document ).on('click', function() {
   var right = 0;
   var wrong = 0;
@@ -275,6 +279,8 @@ if ($('#correct16').is(':checked')) {
 
 
 });
+
+
 //advanced game comments. 
 //start the first game.  All subsequent games are started by the user clicking the 'new game' button.
 //displays time left and if time runs out then the endQuestion function is called.
