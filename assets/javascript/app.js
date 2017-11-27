@@ -3,6 +3,7 @@
 //Global Variables
 var displayTime = 100;
 var song = new Audio('assets/The Simpsons.mp3');
+var doh = new Audio('assets/doh1.mp3');
 
 //Game set-up welcome screen
 $('.questions').hide();
@@ -13,8 +14,8 @@ $('.newGame').hide();
 $('.startGame').on('click', function() {
 $('.startGame').hide();
 $('.greet').hide();
-$('.questions').fadeIn(7000);
-$('.timer').fadeIn(7000);
+$('.questions').fadeIn(5000);
+$('.timer').fadeIn(5000);
 $('.score').show();
 $('.newGame').show();
 showTime();
@@ -23,15 +24,15 @@ song.play();
 
 //New Game reset 
 $('.newGame').on('click', function(){
-$('.questions').fadeIn(7000);
-$('.timer').fadeIn(7000);
+$('.questions').fadeIn(5000);
+$('.timer').fadeIn(5000).css('color', 'black');
 $('.right').html(0);
 $('.wrong').html(0);
 $('.unanswered').html(0);
 displayTime = 100;
 $('input[type=radio]').attr('disabled', false); //radio button functionality : resets radios
 $('input[type=radio]').prop('checked',false); //clears previous radio selection
-$('.gameover').empty(); 
+$('.gameover').empty();
 showTime();
 song.play();
 
@@ -40,19 +41,25 @@ song.play();
 //Timer Functionality
 function showTime(){
 	$("#displayTime").text(displayTime);
-	secondsLeft = setInterval(decrement, 1000);
+  secondsLeft = setInterval(decrement, 1000);
 
 	
 };
 function decrement(){
 	displayTime--;
 	$("#displayTime").text(displayTime);
+  if (displayTime < 25) { //warns player that game is almost over
+    $('.timer').css('color', 'red');
+  }
+
+
 	if (displayTime == 0) {  //hide all questions when game over, push scorebox to top of page.
     $('.questions').hide();
     $('.score').animate({ scrollTop: 0 }, 'fast');
     $('.gameover').html('Game Over!');
     $('.timer').hide();
 		clearInterval(secondsLeft);
+    doh.play();
 	}
 };
 
