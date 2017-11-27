@@ -3,6 +3,7 @@ body,
 header, {
     
     height: 100%;
+
 }
 
 .jumbotron {
@@ -23,8 +24,21 @@ body {
 	}
 
 .timer {
+
 	position: fixed;
+	font-size: 1.5em;
 	
+}
+
+#displayTime {
+
+	font-size: 2em;
+}
+
+.questions {
+
+	padding-left: 25em;
+
 }
 
 label {
@@ -32,7 +46,5 @@ label {
 	font-size: 1.5em;
 }
 
-input:hover {
-	color:red;
-}
+
 
