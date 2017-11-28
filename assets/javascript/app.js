@@ -4,7 +4,7 @@
 var displayTime = 102;
 var song = new Audio('assets/The Simpsons.mp3');
 var doh = new Audio('assets/doh1.mp3');
-
+var woohoo = new Audio('assets/woohoo.mp3');
 //Game set-up welcome screen
 $('.questions').hide();
 $('.timer').hide();
@@ -60,7 +60,9 @@ function decrement(){
     $('.timer').hide();
 		clearInterval(secondsLeft);
     doh.play();
-	}
+  
+  }
+ 
 };
 
 
