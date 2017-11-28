@@ -1,7 +1,7 @@
-//Jquery / Javascript Cartoon Trivia Game
+//Jquery / Javascript Simpsons Trivia Game
 
 //Global Variables
-var displayTime = 100;
+var displayTime = 102;
 var song = new Audio('assets/The Simpsons.mp3');
 var doh = new Audio('assets/doh1.mp3');
 
@@ -29,7 +29,7 @@ $('.timer').fadeIn(5000).css('color', 'black');
 $('.right').html(0);
 $('.wrong').html(0);
 $('.unanswered').html(0);
-displayTime = 100;
+displayTime = 102;
 $('input[type=radio]').attr('disabled', false); //radio button functionality : resets radios
 $('input[type=radio]').prop('checked',false); //clears previous radio selection
 $('.gameover').empty();
